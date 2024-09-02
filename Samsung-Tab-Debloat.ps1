@@ -1,3 +1,7 @@
+param(
+    [switch]$DisableChrome,
+    [switch]$KeepDailyBoard
+)
 where.exe adb.exe
 if($lastexitcode -eq 1) { # ADB not installed
     Write-Host "ADB is not installed or not in the %PATH%" -ForegroundColor Red
@@ -7,7 +11,6 @@ if($lastexitcode -eq 1) { # ADB not installed
     "com.google.android.apps.youtube.music"
     "com.google.android.videos"
     "com.samsung.android.mobileservice"
-    "com.android.chrome"
     "com.samsung.android.messaging"
     "com.samsung.android.dialer"
     "com.samsung.android.app.contacts"
@@ -54,7 +57,21 @@ if($lastexitcode -eq 1) { # ADB not installed
     "com.samsung.android.scpm"
     "com.samsung.android.scloud"
     "com.sec.android.app.billing"
+    "com.samsung.android.vtcamerasettings"
+    "com.samsung.android.video"
+    "com.samsung.SMT"
+    "com.samsung.android.app.reminder"
 )
+if($DisableChrome) {
+    $AppsToRemove=$AppsToRemove+@("com.android.chrome")
+}
+if(!($KeepDailyBoard)) {
+    $AppsToRemove=$AppsToRemove+@(
+    "com.samsung.android.homemode"
+    "com.samsung.android.calendar"
+    "com.sec.android.daemonapp"
+    )
+}
 foreach($App in $AppsToRemove) {
     if($(adb shell pm list package $App) -like "package:$App") {
         Write-Host "Uninstalling $App" -ForegroundColor Yellow

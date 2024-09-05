@@ -46,7 +46,7 @@ if($lastexitcode -eq 1) { # ADB not installed
     "com.samsung.android.app.tips"
     "com.sec.android.easyMover"
     "com.sec.android.easyMover.Agent"
-    "com.rsupport.rs.activity.rsupport.aas2" # Samsung support
+    # "com.rsupport.rs.activity.rsupport.aas2" # Samsung support app. If you also installs my dummy app then this app won't needed to be removed.
     "com.samsung.android.privateshare"
     "com.samsung.android.mapsagent"
     "com.samsung.android.da.daagent"

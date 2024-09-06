@@ -10,6 +10,7 @@ if($lastexitcode -eq 1) { # ADB not installed
 [string[]]$AppsToRemove=@(
     "com.google.android.apps.youtube.music"
     "com.google.android.videos"
+    "com.google.ar.core"
     "com.samsung.android.mobileservice"
     "com.samsung.android.messaging"
     "com.samsung.android.dialer"
@@ -61,6 +62,19 @@ if($lastexitcode -eq 1) { # ADB not installed
     "com.samsung.android.video"
     "com.samsung.SMT"
     "com.samsung.android.app.reminder"
+    "com.samsung.android.dynamiclock"
+    "com.sec.android.autodoodle.service"
+    "com.sec.enterprise.knox.cloudmdm.smdms"
+    "com.sec.enterprise.knox.attestation"
+    "com.sec.spp.push"
+    "com.samsung.android.app.routines"
+    "com.sec.android.autodoodle.service"
+    "com.sec.android.widgetapp.webmanual"
+    "com.samsung.android.mcfds"
+    "com.samsung.android.sm.devicesecurity" #McAfee
+    "com.samsung.android.stickercenter"
+    "com.samsung.android.app.watchmanagerstub"
+    "com.samsung.android.app.updatecenter"
 )
 if($DisableChrome) {
     $AppsToRemove=$AppsToRemove+@("com.android.chrome")

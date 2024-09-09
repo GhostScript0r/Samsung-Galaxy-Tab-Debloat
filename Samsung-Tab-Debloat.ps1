@@ -75,7 +75,26 @@ if($lastexitcode -eq 1) { # ADB not installed
     "com.samsung.android.stickercenter"
     "com.samsung.android.app.watchmanagerstub"
     "com.samsung.android.app.updatecenter"
+    "com.sec.android.app.clockpackage"
+    "com.diotek.sec.lookup.dictionary"
+    "com.samsung.android.app.dofviewer"
+    "com.sec.android.mimage.photoretouching"
+    "com.sec.android.app.ve.vebgm"
+    "com.samsung.android.knox.kpecore"
+    "com.samsung.android.inputshare"
+    "de.axelspringer.yana.zeropage"
+    "com.google.android.adservices.api"
+    "com.google.mainline.adservices"
+    "com.samsung.android.authfw"
+    "com.samsung.android.knox.mpos"
+    "com.samsung.android.net.wifi.wifiguider"
+    "com.samsung.klmsagent"
+    "com.samsung.android.service.airviewdictionary"
+    "com.samsung.android.service.livedrawing"
+    "com.samsung.android.rubin.app"
+    "com.samsung.android.smartcallprovider"
 )
+
 if($DisableChrome) {
     $AppsToRemove=$AppsToRemove+@("com.android.chrome")
 }

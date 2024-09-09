@@ -75,7 +75,6 @@ if($lastexitcode -eq 1) { # ADB not installed
     "com.samsung.android.stickercenter"
     "com.samsung.android.app.watchmanagerstub"
     "com.samsung.android.app.updatecenter"
-    "com.sec.android.app.clockpackage"
     "com.diotek.sec.lookup.dictionary"
     "com.samsung.android.app.dofviewer"
     "com.sec.android.mimage.photoretouching"
@@ -100,9 +99,10 @@ if($DisableChrome) {
 }
 if(!($KeepDailyBoard)) {
     $AppsToRemove=$AppsToRemove+@(
-    "com.samsung.android.homemode"
-    "com.samsung.android.calendar"
-    "com.sec.android.daemonapp"
+        "com.samsung.android.homemode"
+        "com.samsung.android.calendar"
+        "com.sec.android.daemonapp"
+        "com.sec.android.app.clockpackage"
     )
 }
 foreach($App in $AppsToRemove) {

@@ -92,6 +92,7 @@ if($lastexitcode -eq 1) { # ADB not installed
     "com.samsung.android.service.livedrawing"
     "com.samsung.android.rubin.app"
     "com.samsung.android.smartcallprovider"
+    "com.samsung.android.kidsinstaller"
 )
 
 if($DisableChrome) {
